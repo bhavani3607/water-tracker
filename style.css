@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main container */
+.container {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #1976d2;
+}
+
+.goal {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Glass grid */
+.glasses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Single glass */
+.glass {
+  height: 60px;
+  border: 2px solid #1976d2;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #1976d2;
+  transition: 0.3s;
+}
+
+.glass.filled {
+  background: #1976d2;
+  color: white;
+}
+
+/* Progress bar */
+.progress-container {
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.3s;
+}
+
+.info {
+  font-size: 14px;
+}
+
+.message {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #125aa0;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .glass {
+    height: 50px;
+    font-size: 11px;
+  }
+
+  button {
+    width: 100%;
+  }
+  .goal-setting {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.goal-setting input {
+  width: 50px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+.streak {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+}
+
